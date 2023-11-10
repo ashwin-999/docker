@@ -1,0 +1,1 @@
+run `bash build_boost_python_image.sh` to build docker

@@ -1,0 +1,1 @@
+docker build -t boost_python_ubuntu_20_04 -f linux_20_04-docker.Dockerfile .
