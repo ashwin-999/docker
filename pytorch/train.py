@@ -6,7 +6,8 @@ import mlflow
 import mlflow.pytorch
 
 # Configure the MLflow connection to your server
-mlflow.set_tracking_uri("http://host.docker.internal:5000")
+mlflow.set_tracking_uri("http://host.docker.internal:30000")
+# mlflow.set_tracking_uri("http://127.0.0.1:5000")
 mlflow.set_experiment("pytorch_experiment")
 
 # Define a simple neural network

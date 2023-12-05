@@ -1,0 +1,17 @@
+
+docker build -t ashwinakannan/mlflow:1.0 .
+docker push ashwinakannan/mlflow:1.0
+
+helm create mlflow-chart
+
+helm install mlflow-release ./mlflow-chart
+
+helm uninstall mlflow-release
+
+
+# if one wants to access mlflow
+# using ClusterIP will let the services be accessible from the k8 cluster not outside
+# to access from outside, forward-port using below command,
+# then use localhost:5000 to access mlflow
+# there are other ways to do like using ingress
+kubectl port-forward service/mlflow-service 5000:5000
