@@ -4,6 +4,8 @@
 
 2. Modify spec in `mlflow-service.yaml `
 
+"k8s-manifests" is provided for reference
+
 By default, Kubernetes Services are of type ClusterIP, which are only accessible within the Kubernetes cluster.
 To access the service externally (like via localhost), change the service type to NodePort or LoadBalancer. For local development, NodePort is typically used.
 
@@ -17,6 +19,7 @@ spec:
         nodePort: 30000 
 ```
 
+
 3. Apply Generated Kubernetes Manifests
 `kubectl apply -f test`
 
@@ -24,7 +27,7 @@ spec:
 4. Access MLFlow UI at localhost:30000
 
 
-NOTE: ashwinakannan/mlflow:1.0 is the mlflow image pushed to registry.
+NOTE: ashwinakannan/mlflow:1.0 is the mlflow image pushed to registry
 
 from inside mlflow dir,
 
