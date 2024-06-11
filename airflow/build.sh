@@ -1,0 +1,1 @@
+docker build -t ash_airflow -f airflow-docker.Dockerfile .
